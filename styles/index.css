@@ -7,7 +7,7 @@
 body{
     background-image: url("../assets/imgs/background.jpg");
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,7 +102,33 @@ main{
     z-index: 10; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.6);
 }
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para las tarjetas */
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+}
 
+.card img {
+    height: 55vh;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+.card-body img{
+    object-fit: cover;
+   
+}
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 #silueta{
     width: 100vw; 
     overflow: hidden; 
@@ -118,7 +144,9 @@ main{
     
 }
 
-
+footer{
+    margin-top: auto;
+}
 
 
 audio{
