@@ -8,56 +8,78 @@
     <title>Harry Potter</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/logo.png" alt="Logo">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">INFO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SHOP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">MORE</a>
-                        </li>
-                    </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-12 p-0" id="navbar">
+                <!--<nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="./assets/imgs/logo.png" alt="Logo">
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">INFO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">SHOP</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">MORE</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>-->
+            </header>
+        </div>
+        <div class="row">
+            <main class="p-0">
+                <div>
+                    <img src="./assets/imgs/Logo-Harry-potter.png" alt="harry potter" class="d-block mx-auto" id="title">
                 </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div>
-            <img src="./assets/imgs/Logo-Harry-potter.png" alt="harry potter" class="d-block mx-auto" id="title">
+                <section id="sectionImages" class="">
+                    <img src="./assets/imgs/Books_Discover_Flexible_Carousel_Promo_image_no_next__1_.png" alt="card" class="cardsImg">
+                    <img src="./assets/imgs/Experiences_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
+                    <img src="./assets/imgs/Starting_Harry_Potter_Flexible_Carousel_Promo_Image_no_text__1_.png" alt="cards" class="cardsImg">
+                    <img src="./assets/imgs/Films_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
+                    <img src="./assets/imgs/Portkey_Games_Discover_Flexible_Carousel_imaged_no_text__1_.png" alt="cards" class="cardsImg">
+                </section>
+                <div id="silueta">
+                    <img src="./assets/imgs/horizons_train.png" alt="imgHogwarts">
+                </div>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-12 col-md-8 d-flex overflow-auto checkbox-container mb-3 mb-md-0"></div>
+                        <div class="col-12 col-md-4">
+                            <form id="search-form" class="d-flex p-0">
+                                <input id="search-bar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3">
+                    <button id="filter-students" class="btn btn-primary">Show Students</button>
+                    <button id="filter-staff" class="btn btn-secondary">Show Staff</button>
+                </div>
+                <div class="row justify-content-center mx-0 mt-3" id="card-temple"></div>
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center" id="pagination"></ul>
+                </nav>
+                <audio controls autoplay>
+                    <source src="./assets/sounds/Y2meta.app - harry potter musica (128 kbps).mp3" type="audio/mpeg">
+                    Tu navegador no soporta la etiqueta de audio.
+                </audio>
+            </main>
+            <footer>
+            </footer>
         </div>
-        <section id="sectionImages" class="">
-            <img src="./assets/imgs/Books_Discover_Flexible_Carousel_Promo_image_no_next__1_.png" alt="card" class="cardsImg">
-            <img src="./assets/imgs/Experiences_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
-            <img src="./assets/imgs/Starting_Harry_Potter_Flexible_Carousel_Promo_Image_no_text__1_.png" alt="cards" class="cardsImg">
-            <img src="./assets/imgs/Films_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
-            <img src="./assets/imgs/Portkey_Games_Discover_Flexible_Carousel_imaged_no_text__1_.png" alt="cards" class="cardsImg">
-        </section>
-        
-        <div id="silueta">
-            <img src="./assets/imgs/horizons_train.png" alt="imgHogwarts">
-        </div>
-        <audio controls autoplaya>
-            <source src="./assets/sounds/Y2meta.app - harry potter musica (128 kbps).mp3" type="audio/mpeg">
-            Tu navegador no soporta la etiqueta de audio.
-        </audio>
-        
-    </main>
-    <footer>
-
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
 </body>
+<script type="module" src="./home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

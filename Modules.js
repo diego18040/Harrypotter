@@ -27,3 +27,30 @@ export function loadNavbar() {
     const navbarContainer = document.getElementById('navbar');
     navbarContainer.innerHTML = Navbar;
 }
+export function renderCharacters(characters) {
+    const cardContainer = document.getElementById('card-temple');
+    if (characters.length === 0) {
+        cardContainer.innerHTML = `
+          <div class="no-results text-center">
+            <h3>"UPSS.... " Lo sentimos, no hay coincidencias para tu búsqueda.</h3>
+            <ul class="list-unstyled">
+              <li>Revisa la ortografía del nombre.</li>
+              <li>Asegúrate de escribir sin caracteres especiales.</li>
+              <li>Prueba con otro nombre.</li>
+            </ul>
+          </div>
+        `;
+        return;
+    }
+    cardContainer.innerHTML = characters.map(character => `
+      <div class="col-11 col-md-5 col-lg-2 p-0 m-3">
+        <div class="card mx-auto h-100">
+          <img src="${character.image}" class="card-img-top img-fluid" alt="${character.name}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center">${character.name}</h5>
+            <p class="card-text text-center">House: ${character.house || 'Unknown'}</p>
+          </div>
+        </div>
+      </div>
+    `).join("");
+}
