@@ -33,18 +33,18 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="app">
         <div class="card mb-3" style="width: 740px; height: 400px;" id="cardDetails">
-            <div class="row g-0" id="infoCardContainer">
+            <div v-if="characters" class="row g-0" id="infoCardContainer">
             <div class="col-md-4">
-                <img src="..." class="img-fluid " alt="...">
+                <img :src="characters[1].image" class="img-fluid " alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                <h5 class="card-title fs-1 mb-5">nombre</h5>
-                <p class="card-text fs-5">casa</p>
-                <p class="card-text fs-5">especie</p>
-                <p class="card-text fs-5">actor</p>
+                <h5 class="card-title fs-1 mb-5">{{characters[1].name}}</h5>
+                <p class="card-text fs-5"><strong>House: </strong>{{characters[1].house}}</p>
+                <p class="card-text fs-5"><strong>Species: </strong>{{characters[1].species}}</p>
+                <p class="card-text fs-5"><strong>Actor: </strong>{{characters[1].actor}}</p>
                 </div>
             </div>
             </div>
@@ -53,8 +53,35 @@
             <img src="./assets/imgs/horizons_village.png" alt="imgHogwarts">
         </div>
     </main>
-    <footer>
+    
+        <footer class="bg-dark text-white py-4">
+            <div class="container d-flex justify-content-between align-items-center">
+              <div class="d-flex">
+                <a href="" class="text-white me-3" >
+                  <img src="./assets/icons/github.png" alt="" style="width:50px;">
+                </a>
+                <a href="#" class="text-white me-3">
+                    <img src="./assets/icons/facebook.png" alt="" style="width:50px;">
+                </a>
+                <a href="#" class="text-white">
+                    <img src="./assets/icons/instagram.png" alt="" style="width:50px;">
+                </a>
+              </div>
 
-    </footer>
+              <div class="text-center">
+                <a href="./index.html"><img id="logoFooter" src="./assets/imgs/logo.png" alt="Logo" class="img-fluid" style="width: 50px;"></a>
+              </div>
+      
+              <div class="text-end">
+                <p class="mb-0">© 2024 Todos los derechos reservados</p>
+              </div>
+            </div>
+          </footer>
+      </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./java/details.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
