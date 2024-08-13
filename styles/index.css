@@ -219,6 +219,33 @@ audio:hover{
     height: 100%;
     object-fit: cover;
  }
+ .card {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para las tarjetas */
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.card img {
+    height: 45vh;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+.card-body img{
+    object-fit: cover;
+   
+}
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 .backText{
     position: relative;
     margin-top: 2rem;
