@@ -265,3 +265,43 @@ audio:hover{
 .cardSpell:hover .back{
     transform: perspective(600px) rotateY(360deg);
 } 
+
+
+
+
+.containerButton {
+    position: relative;
+    width: 180px;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.image {
+    width: 100px;
+    height: 150px;
+    display: block;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-family: cursive;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.text-overlay:hover {
+    color: black;
+}
