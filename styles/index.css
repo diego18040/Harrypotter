@@ -118,6 +118,13 @@ main{
     
 }
 
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+  }
 
 
 
@@ -128,6 +135,7 @@ audio{
     right: 10px;
     
 }
+
 
 audio:hover{
     opacity: 0.8;

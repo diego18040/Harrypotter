@@ -41,24 +41,10 @@ body{
     margin-left: auto;
 }
 
-
 main{
-    display: flex;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-
+    width: 100%;
 }
 
-#cardDetails{
-    background-color: rgb(28, 93, 113);
-    color: white;
-}
-
-#infoCardContainer{
-    height: 100%;
-    padding: 30px;
-}
 
 
 #silueta{
@@ -75,3 +61,13 @@ main{
   
     
 }
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+
+
