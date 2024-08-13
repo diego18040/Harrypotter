@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const paginationContainer = document.getElementById('pagination');
 
     let currentPage = 1;
-    const cardsPerPage = 5;
+    const cardsPerPage = 10;
     let filteredData = [];
 
     const fetchData = async (role) => {
