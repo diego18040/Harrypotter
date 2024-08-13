@@ -17,7 +17,7 @@ export function loadNavbar() {
                             <a class="nav-link" href="#">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">MORE</a>
+                            <a class="nav-link" href="./pages/spells.html">SPELLS</a>
                         </li>
                     </ul>
                 </div>
