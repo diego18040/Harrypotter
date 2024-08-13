@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/details.css">
+    <link rel="stylesheet" href="../styles/details.css">
     <title>Harry Potter Details</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/logo.png" alt="Logo">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/imgs/logo.png" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">HOME</a>
+                            <a class="nav-link" href="../index.html">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">INFO</a>
@@ -26,7 +26,7 @@
                             <a class="nav-link" href="#">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">MORE</a>
+                            <a class="nav-link" href="./spells.html">SPELLS</a>
                         </li>
                     </ul>
                 </div>
@@ -34,42 +34,44 @@
         </nav>
     </header>
     <main id="app">
-        <div class="card mb-3" style="width: 740px; height: 400px;" id="cardDetails">
+        <div class="card mb-3" style="width: 840px; height: 400px;" id="cardDetails">
             <div v-if="characters" class="row g-0" id="infoCardContainer">
             <div class="col-md-4">
-                <img :src="characters[1].image" class="img-fluid " alt="...">
+                <img :src="findCharacterId.image" class="img-fluid" id="detailsImg" :alt="findCharacterId.name">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                <h5 class="card-title fs-1 mb-5">{{characters[1].name}}</h5>
-                <p class="card-text fs-5"><strong>House: </strong>{{characters[1].house}}</p>
-                <p class="card-text fs-5"><strong>Species: </strong>{{characters[1].species}}</p>
-                <p class="card-text fs-5"><strong>Actor: </strong>{{characters[1].actor}}</p>
+                <h5 class="card-title fs-1 mb-5">{{findCharacterId.name}}</h5>
+                <p class="card-text fs-5"><strong>House: </strong>{{findCharacterId.house}}</p>
+                <p class="card-text fs-5"><strong>Species: </strong>{{findCharacterId.species}}</p>
+                <p class="card-text fs-5"><strong>Actor: </strong>{{findCharacterId.actor}}</p>
                 </div>
             </div>
             </div>
         </div>
         <div id="silueta">
-            <img src="./assets/imgs/horizons_village.png" alt="imgHogwarts">
+            <img src="../assets/imgs/horizons_village.png" alt="imgHogwarts">
         </div>
+
+        
     </main>
     
         <footer class="bg-dark text-white py-4">
             <div class="container d-flex justify-content-between align-items-center">
               <div class="d-flex">
                 <a href="" class="text-white me-3" >
-                  <img src="./assets/icons/github.png" alt="" style="width:50px;">
+                  <img src="../assets/icons/github.png" alt="" style="width:50px;">
                 </a>
                 <a href="#" class="text-white me-3">
-                    <img src="./assets/icons/facebook.png" alt="" style="width:50px;">
+                    <img src="../assets/icons/facebook.png" alt="" style="width:50px;">
                 </a>
                 <a href="#" class="text-white">
-                    <img src="./assets/icons/instagram.png" alt="" style="width:50px;">
+                    <img src="../assets/icons/instagram.png" alt="" style="width:50px;">
                 </a>
               </div>
 
               <div class="text-center">
-                <a href="./index.html"><img id="logoFooter" src="./assets/imgs/logo.png" alt="Logo" class="img-fluid" style="width: 50px;"></a>
+                <a href="../index.html"><img id="logoFooter" src="../assets/imgs/logo.png" alt="Logo" class="img-fluid" style="width: 50px;"></a>
               </div>
       
               <div class="text-end">
@@ -80,7 +82,7 @@
       </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./java/details.js" type="module"></script>
+    <script src="../java/details.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>

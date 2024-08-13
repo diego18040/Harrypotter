@@ -49,8 +49,13 @@ export function renderCharacters(characters) {
           <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">${character.name}</h5>
             <p class="card-text text-center">House: ${character.house || 'Unknown'}</p>
+            <div class="containerButton">
+           <img src="./assets/icons/isolated_old.png" alt="Descripción de la imagen" class="image">
+             <a href="../pages/details.html?id=${character.id}"><p class="text-overlay">Details</p></a>
+        </div>
           </div>
         </div>
       </div>
     `).join("");
 }
+

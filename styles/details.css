@@ -51,13 +51,24 @@ main{
 }
 
 #cardDetails{
-    background-color: rgb(28, 93, 113);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../assets/imgs/llK.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    
+
 }
 
 #infoCardContainer{
     height: 100%;
     padding: 30px;
+}
+
+#detailsImg{
+    height: 90%;
 }
 
 
@@ -85,3 +96,34 @@ footer {
     left: 0;
     opacity: 0.6;
   }
+
+#ContainerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: black solid 2px;
+}
+
+#ContainerButton a{
+    height: 100%;
+}
+
+#ContainerButton p{
+    position: relative;
+    right: 50%;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+
+  #buttonImg{
+    width: 130px;
+    height: 200px;
+    transform: rotate(-90deg);
+  }
+
+  
