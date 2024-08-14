@@ -188,12 +188,13 @@ main{
 
 #title {
     width: 650px;
-    margin-top: 20px;
+    margin-top: 3rem;
 }
 #sectionImages {
    display: flex;
    justify-content: center;
    position: relative;
+   margin-bottom: 8rem;
 }
 #houseChart,#speciesChart,#aliveChart {
     width: 300px; /* Ajusta el ancho según sea necesario */
