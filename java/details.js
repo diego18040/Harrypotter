@@ -1,3 +1,4 @@
+
 let urlParams = new URLSearchParams(window.location.search)
 let characterId = urlParams.get('id')
 console.log(characterId);
@@ -8,7 +9,6 @@ URL = "https://hp-api.onrender.com/api/characters/"
 
 
 const {createApp} = Vue
-
 const app = createApp({
     data(){
         return{
