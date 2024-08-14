@@ -29,7 +29,7 @@ function cards(spells) {
         card.innerHTML = `
              <div class="cardSpell">
                 <div class="face front">
-                    <img src="../assets/imgs/hogwarts.jpg" alt="hogwarts logo">
+                    <img src="../assets/imgs/Cover-Book.jpg" alt="hogwarts logo">
                     <h3>${spell.name}</h3>
                 </div>
                 <div class="face back">
