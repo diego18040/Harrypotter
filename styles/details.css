@@ -20,7 +20,7 @@ body{
     background-color: black;
 }
 .navbar {
-    background-color: black
+    background-color: black !important;
 }
 
 .navbar-brand img {
