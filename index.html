@@ -8,65 +8,44 @@
     <title>Harry Potter</title>
 </head>
 <body>
+
     <div class="container-fluid">
         <div class="row">
             <header class="col-12 p-0" id="navbar">
-                <!--<nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="./assets/imgs/logo.png" alt="Logo">
-                        </a>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">HOME</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./info.html">INFO</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">SHOP</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">MORE</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>-->
             </header>
         </div>
         <div class="row">
             <main class="p-0">
                 <div>
-                    <img src="./assets/imgs/Logo-Harry-potter.png" alt="harry potter" class="d-block mx-auto" id="title">
+                    <img src="./assets/imgs/Harry potter.png" alt="harry potter" class="d-block mx-auto" id="title">
                 </div>
                 <section id="sectionImages" class="">
-                    <img src="./assets/imgs/Books_Discover_Flexible_Carousel_Promo_image_no_next__1_.png" alt="card" class="cardsImg">
-                    <img src="./assets/imgs/Experiences_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
-                    <img src="./assets/imgs/Starting_Harry_Potter_Flexible_Carousel_Promo_Image_no_text__1_.png" alt="cards" class="cardsImg">
-                    <img src="./assets/imgs/Films_Discover_Flexible_Carousel_Promo_image_no_text__1_.png" alt="cards" class="cardsImg">
-                    <img src="./assets/imgs/Portkey_Games_Discover_Flexible_Carousel_imaged_no_text__1_.png" alt="cards" class="cardsImg">
+                    <img src="./assets/imgs/halfBloodPrince.jpg" alt="card" class="cardsImg" title="More info" onclick="redirigir('https://www.warnerbros.com/movies/harry-potter-and-half-blood-prince')">
+                    <img src="./assets/imgs/Harry_Potter_and_the_Sorcerer27s_Stone.webp" alt="cards" title="More info" class="cardsImg" onclick="redirigir('https://www.warnerbros.com/movies/harry-potter-and-sorcerers-stone')">
+                    <img src="./assets/imgs/deathHallows.jpeg" alt="cards" class="cardsImg" title="More info" onclick="redirigir('https://www.warnerbroslatino.com/es-mx/peliculas/harry-potter-y-las-reliquias-de-la-muerte-parte-2')">
+                    <img src="./assets/imgs/orderOfPhoexin.webp" alt="cards" title="More info" class="cardsImg" onclick="redirigir('https://www.warnerbros.com/movies/harry-potter-and-order-phoenix')">
+                    <img src="./assets/imgs/gobletOfFire.webp" alt="cards" title="More info" class="cardsImg" onclick="redirigir('https://www.warnerbros.com/movies/harry-potter-and-goblet-fire')">
                 </section>
                 <div id="silueta">
                     <img src="./assets/imgs/horizons_train.png" alt="imgHogwarts">
                 </div>
                 <div class="container mt-3">
                     <div class="row">
-                        <div class="col-12 col-md-8 d-flex overflow-auto checkbox-container mb-3 mb-md-0"></div>
-                        <div class="col-12 col-md-4">
+                        <div class=".col-12 .col-md-8">
                             <form id="search-form" class="d-flex p-0">
                                 <input id="search-bar" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                                <button class="btn btn-success" type="submit">Search</button>
                             </form>
+                            <div class="container mt-3 .col-6 .col-md-4">
+                                <button id="filter-students" class="btn btn-primary">Show Students</button>
+                                <button id="filter-staff" class="btn btn-secondary">Show Staff</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="container mt-3">
-                    <button id="filter-students" class="btn btn-primary">Show Students</button>
-                    <button id="filter-staff" class="btn btn-secondary">Show Staff</button>
+                <div class="row justify-content-center mx-0 mt-3 " id="card-temple">
+
                 </div>
-                <div class="row justify-content-center mx-0 mt-3 " id="card-temple"></div>
                 <nav aria-label="Page navigation" class="mt-4">
                     <ul class="pagination justify-content-center" id="pagination"></ul>
                 </nav>
@@ -77,13 +56,13 @@
             <footer class="bg-dark text-white py-4">
                 <div class="container d-flex justify-content-between align-items-center">
                 <div class="d-flex">
-                    <a href="" class="text-white me-3" >
+                    <a href="https://github.com/diego18040/Harrypotter" class="text-white me-3" >
                     <img src="./assets/icons/github.png" alt="" style="width:50px;">
                     </a>
-                    <a href="#" class="text-white me-3">
+                    <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" class="text-white me-3">
                         <img src="./assets/icons/facebook.png" alt="" style="width:50px;">
                     </a>
-                    <a href="#" class="text-white">
+                    <a href="https://www.instagram.com/" class="text-white">
                         <img src="./assets/icons/instagram.png" alt="" style="width:50px;">
                     </a>
                 </div>
@@ -102,4 +81,9 @@
 </body>
 <script type="module" src="./java/home.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    function redirigir(url) {
+        window.open(url);
+    }
+</script>
 </html>
