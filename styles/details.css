@@ -13,7 +13,12 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+#navS{
+    background-color: black;
+}
+#navW{
+    background-color: black;
+}
 .navbar {
     background-color: black
 }

@@ -1,3 +1,4 @@
+
 let url = 'https://hp-api.onrender.com/api/characters';
 let wandImg = [
     {

@@ -16,7 +16,7 @@ body{
 }
 
 .navbar {
-    background-color: black
+    background-color: black !important;
 }
 
 .navbar-brand img {
@@ -209,16 +209,18 @@ main{
     border-radius: 10px; /* Bordes redondeados */
 }
 /* Opcional: estilos adicionales para la tabla */
-.table {
-    --bs-table-bg: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
+#tabla1 {
+    background-color: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
     border-radius: 1rem; /* Bordes redondeados para la tabla */
     text-align: center;
     
 }
 
 /* Opcional: estilos para las celdas de la tabla */
-.table th, .table td {
+#tabla1 th, #tabla1 td,#tabla1 tr {
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.0);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.0));
     outline: solid black 1px;
     text-align: center;
     font-size: 1.2rem;
@@ -585,8 +587,8 @@ tbody tr:hover {
     
 }
 #navS{
-    background-color: black;
+    background-color: black !important;
 }
 #navW{
-    background-color: black;
+    background-color: black !important;
 }
