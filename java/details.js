@@ -9,7 +9,6 @@ URL = "https://hp-api.onrender.com/api/characters/"
 
 
 const {createApp} = Vue
-
 const app = createApp({
     data(){
         return{
