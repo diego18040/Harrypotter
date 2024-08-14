@@ -14,9 +14,15 @@ const app = createApp({
 
             hufflepuffUrl: [],
             hufflepuffUrlVc: [],
+
             gryffindorUrl: [],
+            gryffindorUrlVc: [],
+
             slytherUrl: [],
+            slytherUrlVc: [],
+
             ravenclawUrl: [],
+            ravenclawUrlVc: [],
 
             textoBuscador: "",
             checkboxHouses: [],
@@ -34,14 +40,17 @@ const app = createApp({
             const response2 = await fetch(url2);
             const data2 = await response2.json();
             this.gryffindorUrl = data2;
+            this.gryffindorUrlVc = data2;
 
             const response3 = await fetch(url3);
             const data3 = await response3.json();
             this.slytherUrl = data3;
+            this.slytherUrlVc = data3;
 
             const response4 = await fetch(url4);
             const data4 = await response4.json();
             this.ravenclawUrl = data4;
+            this.ravenclawUrlVc = data4;
 
             const response5 = await fetch(url5);
             const data5 = await response5.json();
@@ -57,25 +66,35 @@ const app = createApp({
     computed: {
         
         superFilteredCharacters() {
-            let filtroTexto = this.hufflepuffUrlVc.filter(character => 
+            let filtroHufflepuff = this.hufflepuffUrlVc.filter(character => 
                 character.name.toLowerCase().includes(this.textoBuscador.toLowerCase()));
-                this.hufflepuffUrl = filtroTexto;
+                
+          
+                let filtroGryffindor    = this.gryffindorUrlVc.filter(character => 
+                character.name.toLowerCase().includes(this.textoBuscador.toLowerCase()));
+                
+
+                let filtroSlytherin = this.slytherUrlVc.filter(character =>
+                character.name.toLowerCase().includes(this.textoBuscador.toLowerCase()));
+                this.slytherUrl = filtroSlytherin;
+
+                let filtroRavenclaw = this.ravenclawUrlVc.filter(character =>
+                character.name.toLowerCase().includes(this.textoBuscador.toLowerCase()));
+            
+
+               if (this.checkboxHouses.length === 0) {
+                this.hufflepuffUrl = filtroHufflepuff;
+                this.gryffindorUrl = filtroGryffindor;
+                this.slytherUrl = filtroSlytherin;
+                this.ravenclawUrl = filtroRavenclaw; 
+            }
+            else{
+                this.hufflepuffUrl = filtroHufflepuff.filter(character => this.checkboxHouses.includes(character.house));
+                this.gryffindorUrl = filtroGryffindor.filter(character => this.checkboxHouses.includes(character.house));
+                this.slytherUrl = filtroSlytherin.filter(character => this.checkboxHouses.includes(character.house));
+                this.ravenclawUrl = filtroRavenclaw.filter(character => this.checkboxHouses.includes(character.house));
+            }
         },
-        // filteredCharacters() {
-        //     return this.allCharacters.filter((character) => {
-        //         return character.name.toLowerCase().includes(this.textoBuscador.toLowerCase());
-        //     });
-        // }
-        // filteredCharactersByHouse() {
-        //     return this.allCharacters.filter((character) => {
-        //         return this.checkboxHouses.includes(character.house);
-        //     });
-        // }
-        // filteredCharactersCombined() {
-        //     return this.allCharacters.filter((character) => {
-        //         return character.name.toLowerCase().includes(this.textoBuscador.toLowerCase()) && this.checkboxHouses.includes(character.house);
-        //     });
-        // },
     },
     created() {
         this.getCharacters(hufflepuffUrl, gryffindorUrl, slytherUrl, ravenclawUrl, allCharacters);

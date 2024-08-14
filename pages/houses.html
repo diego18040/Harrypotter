@@ -47,20 +47,23 @@
         <!-- <h2 id="maintext" class="text-center m-4 p-4">Here you will find the most practiced spells in Hogwarts.</h2> -->
 <div>
     {{superFilteredCharacters}}
-<!-- barra de busqueda -->
-<div class="d-flex justify-content-center">
-    <input v-model="textoBuscador" class="form-control w-75 text-center mb-5" type="text" id="buscaText" placeholder="Search">
-</div>
 
+    
 <!-- checkbox -->
 <div>
-    <ul v-for="casa in housesName" class="list-group">
-        <li class="list-group-item">
-          <input class="form-check-input me-1" type="checkbox" value="" :id="casa">
-          <label class="form-check-label" :for="casa">{{casa}}</label>
-        </li>
-      </ul>   
+    <div v-for="casa in housesName" class="list-group" id="checks">
+        <div class="form-check form-switch d-flex gap-2 ms-5">
+          <input  v-model="checkboxHouses" class="form-check-input" type="checkbox" role="switch" :value="casa" >
+          <label class="form-check-label text-light" :for="casa">{{casa}}</label>
+        </div>
+    </div>   
 </div>
+
+<!-- barra de busqueda -->
+<form class="d-flex justify-content-center">
+    <input v-model="textoBuscador" class="form-control w-75 text-center mb-5" type="text" id="buscaText" placeholder="Search">
+</form>
+
 </div>
 
           
@@ -82,7 +85,7 @@
             </div>
         </div>
 
-        <div id="frogCardGryffindor" class="d-flex flex-wrap justify-content-center">
+         <div id="frogCardGryffindor" class="d-flex flex-wrap justify-content-center">
             <div v-for="gryffindorCards in gryffindorUrl" class="cards p-2" :id="gryffindorCards.id">
                 <div class="tarjetas">
                     <div class="cara delante">
@@ -135,7 +138,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     
         
 
