@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*outline: solid red;*/
 }
 
 body{
@@ -28,10 +29,21 @@ body{
     transform: scale(1.1); 
     
 }
-
-
+.nav-item img{
+    object-fit: cover;
+    width: 5vw;
+    height:auto;
+    display: flex;
+    justify-content: end;
+}
+.nav-item{
+    display: flex;
+    align-content:center ;
+    align-items: center;
+    justify-content: center;
+}
 .nav-link {
-    color: white;
+    color: rgb(219, 193, 43);
     font-weight: bold;
     font-size: 25px;
     margin-right: 15px;
@@ -39,6 +51,7 @@ body{
 
 .navbar-nav {
     margin-left: auto;
+    justify-content: end;
 }
 
 main{
@@ -49,14 +62,74 @@ main{
     width: 650px;
     margin-top: 20px;
 }
-
-
 #sectionImages {
    display: flex;
    justify-content: center;
    position: relative;
 }
+#houseChart,#speciesChart,#aliveChart {
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 300px; /* Ajusta la altura según sea necesario */
+}
 
+.table-container {
+    background: url("../assets/imgs/card-parchment.jpg");
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;
+    outline: solid black 2px;
+    padding: 20px; /* Espacio alrededor de la tabla */
+    border-radius: 10px; /* Bordes redondeados */
+}
+/* Opcional: estilos adicionales para la tabla */
+.table {
+    --bs-table-bg: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
+    border-radius: 1rem; /* Bordes redondeados para la tabla */
+    text-align: center;
+    
+}
+
+/* Opcional: estilos para las celdas de la tabla */
+.table th, .table td {
+    padding: 10px;
+    outline: solid black 1px;
+    text-align: center;
+    font-size: 1.2rem;
+    align-items: center;
+    align-content: center;
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        padding: 0.5rem;
+    }
+
+    .table {
+        font-size: 0.875rem;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .table {
+        font-size: 0.75rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.25rem;
+    }
+}
+@media (min-width: 992px) {
+    /* Ajuste de margen entre las columnas en pantallas grandes */
+    .table-container {
+        margin-bottom: 0;
+    }
+}
 .cardsImg{
     width: 360px;
     height: auto;
@@ -117,7 +190,6 @@ main{
   
     
 }
-
 footer {
     width: 100%;
     position: relative;
@@ -292,9 +364,6 @@ audio:hover{
 .cardSpell:hover .back{
     transform: perspective(600px) rotateY(360deg);
 } 
-
-
-
 
 .containerButton {
     position: relative;

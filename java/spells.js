@@ -1,3 +1,6 @@
+import { loadNavbar } from "./modules/Modules.js";
+loadNavbar();
+
 let urlSpell = ('https://hp-api.onrender.com/api/spells')
 let spellsArray = []
 
