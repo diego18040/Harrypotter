@@ -8,16 +8,16 @@ export function loadNavbar() {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOME</a>
+                            <a class="nav-link" href="../index.html">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/wands.html">WANDS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SHOP</a>
+                            <a class="nav-link" href="./pages/spells.html">SPELLS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./pages/spells.html">SPELLS</a>
+                            <a class="nav-link" href="../pages/Stats.html">STATS</a>
                         </li>
                     </ul>
                 </div>
