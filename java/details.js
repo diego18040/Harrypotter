@@ -1,3 +1,4 @@
+
 let urlParams = new URLSearchParams(window.location.search)
 let characterId = urlParams.get('id')
 console.log(characterId);
