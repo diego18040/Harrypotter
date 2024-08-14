@@ -3,7 +3,6 @@ import { loadNavbar, renderCharacters } from "./modules/Modules.js";
 document.addEventListener("DOMContentLoaded", function() {
     loadNavbar();
 
-
     const filterStudentsButton = document.getElementById('filter-students');
     const filterStaffButton = document.getElementById('filter-staff');
     const searchBar = document.getElementById('search-bar');
@@ -75,12 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
     filterStudentsButton.addEventListener('click', () => fetchData('hogwartsStudent'));
     filterStaffButton.addEventListener('click', () => fetchData('hogwartsStaff'));
 
     // Load students by default
     fetchData('hogwartsStudent');
 });
-
-

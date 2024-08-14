@@ -57,4 +57,3 @@ export function renderCharacters(characters) {
       </div>
     `).join("");
 }
-
