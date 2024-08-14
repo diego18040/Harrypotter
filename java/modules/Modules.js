@@ -3,7 +3,7 @@ export function loadNavbar() {
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/imgs/logo.png" alt="Logo">
+                    <img src="../assets/imgs/logo.png" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
