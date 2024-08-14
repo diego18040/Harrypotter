@@ -1,6 +1,6 @@
 export function loadNavbar() {
     const Navbar = `
-        <nav class="navbar navbar-expand-lg bg-body-tertiary "data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary>
             <div class="container-fluid">
                 <a class="navbar-brand col-4 col-sm-2 col-md-1" href="../index.html">
                     <img src="../assets/imgs/logo.png" alt="Logo">

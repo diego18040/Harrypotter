@@ -16,8 +16,7 @@ body{
 }
 
 .navbar {
-    background-color: transparent;
-    border-bottom: 2px solid white;
+    background-color: black
 }
 
 .navbar-brand img {
@@ -57,6 +56,135 @@ body{
 main{
     width: 100%;
 }
+/* Paginate container style */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Paginate items */
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #fff; /* Text color */
+    background-color: #8d5d1e; /* Default background */
+    border: 1px solid #dee2e6;
+    border-radius: 10%; /* Circular buttons */
+    text-align: center;
+    width: 40px; /* Width and height for circular shape */
+    height: 40px;
+    line-height: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+.pagination .page-link:hover {
+    background-color: rgb(219, 193, 43); /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Active page */
+.pagination .page-item.active .page-link {
+    background-color: rgb(219, 193, 43); /* Background for active page */
+    border-color: black; /* Active border color */
+    color: white;
+}
+
+/* Disabled pagination */
+.pagination .page-item.disabled .page-link {
+    background-color: #e9ecef; /* Background for disabled */
+    color: #6c757d;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Custom transitions for smoother experience */
+.pagination .page-link {
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+/* Search form style */
+#search-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search-bar {
+    border: 2px solid #000000; /* Border for search input */
+    border-radius: 50px; /* Rounded edges */
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#search-bar:focus {
+    border-color: rgb(219, 193, 43); /* Border color when focused */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Focus shadow */
+}
+
+#search-form button {
+    border-radius: 50px; /* Rounded edges for button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color:  rgb(219, 193, 43); /* Green background */
+    color: white;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#search-form button:hover {
+    background-color:  rgb(219, 193, 43); /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Filter buttons container */
+.container {
+    text-align: center; /* Center the buttons */
+    margin-top: 20px;
+}
+
+#filter-students,
+#filter-staff {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#filter-students {
+    background-color: rgb(194, 111, 17); /* Blue for students button */
+    color: white;
+    outline: solid black 1px;
+}
+
+#filter-staff {
+    background-color: #6c757d; /* Gray for staff button */
+    color: white;
+    outline: solid black 1px;
+}
+
+/* Hover effects for filter buttons */
+#filter-students:hover {
+    background-color:  rgb(219, 193, 43);/* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#filter-staff:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+    transform: scale(1.05); 
+}
+
 
 #title {
     width: 650px;
