@@ -37,20 +37,64 @@ const app = createApp({
             this.hufflepuffUrl = data;
             this.hufflepuffUrlVc = data;
 
+            this.hufflepuffUrl.forEach(character => {
+                if (!character.image) {
+                    if (character.gender === "female") {
+                        character.image = "../assets/imgs/female.jpeg";
+
+                }else{
+                    character.image = "../assets/imgs/male.jpeg";
+                }
+            }
+            });
+
             const response2 = await fetch(url2);
             const data2 = await response2.json();
             this.gryffindorUrl = data2;
             this.gryffindorUrlVc = data2;
+
+            this.gryffindorUrl.forEach(character => {
+                if (!character.image) {
+                    if (character.gender === "female") {
+                        character.image = "../assets/imgs/female.jpeg";
+
+                }else{
+                    character.image = "../assets/imgs/male.jpeg";
+                }
+            }
+            });
 
             const response3 = await fetch(url3);
             const data3 = await response3.json();
             this.slytherUrl = data3;
             this.slytherUrlVc = data3;
 
+            this.slytherUrl.forEach(character => {
+                if (!character.image) {
+                    if (character.gender === "female") {
+                        character.image = "../assets/imgs/female.jpeg";
+
+                }else{
+                    character.image = "../assets/imgs/male.jpeg";
+                }
+            }
+            });
+
             const response4 = await fetch(url4);
             const data4 = await response4.json();
             this.ravenclawUrl = data4;
             this.ravenclawUrlVc = data4;
+
+            this.ravenclawUrl.forEach(character => {
+                if (!character.image) {
+                    if (character.gender === "female") {
+                        character.image = "../assets/imgs/female.jpeg";
+
+                }else{
+                    character.image = "../assets/imgs/male.jpeg";
+                }
+            }
+            });
 
             const response5 = await fetch(url5);
             const data5 = await response5.json();

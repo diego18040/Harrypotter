@@ -290,11 +290,11 @@ h6{
 }
 
 .retrato{
-    height: 200px;
-    width: 130px;
-    border-radius: 20%;
+    height: 167px;
+    width: 115px;
+    /* border-radius: 1%; */
     margin-top: 5rem;
-    margin-left: 5.5rem;
+    margin-left: 6rem;
     opacity: 100%;
     object-fit: cover;
 
