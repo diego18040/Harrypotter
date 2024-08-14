@@ -42,43 +42,105 @@
     </header>
 
     <main id="app">
-        <!-- <div>
-    <video muted autoplay loop>
-        <source src="../assets/videos/The Great Hall Harry Potter.mp4" type="video/mp4">
-    </video>
-   </div>
-   <div class="capa"></div> -->
-        <h2 id="maintext" class="text-center m-4 p-4">Here you will find the most practiced spells in Hogwarts.</h2>
+ 
+        <h1 id="maintext" class="text-center m-4 p-4">Welcome to the Hogwarts Houses</h1>
+        <!-- <h2 id="maintext" class="text-center m-4 p-4">Here you will find the most practiced spells in Hogwarts.</h2> -->
+<div>
+    {{superFilteredCharacters}}
+<!-- barra de busqueda -->
+<div class="d-flex justify-content-center">
+    <input v-model="textoBuscador" class="form-control w-75 text-center mb-5" type="text" id="buscaText" placeholder="Search">
+</div>
 
+<!-- checkbox -->
+<div>
+    <ul v-for="casa in housesName" class="list-group">
+        <li class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="" :id="casa">
+          <label class="form-check-label" :for="casa">{{casa}}</label>
+        </li>
+      </ul>   
+</div>
+</div>
 
-        <div class="d-flex justify-content-center">
-            <input class="form-control w-75 text-center mb-5" type="text" id="textSpell" placeholder="Cast your spell!">
-        </div>
-
-        <div id="frogCard" class="d-flex flex-wrap justify-content-center">
-            <div class="centrarTexto p-2">
+          
+        <div id="frogCardHufflepuff" class="d-flex flex-wrap justify-content-center">
+            <div v-for="hufflepuffCards in hufflepuffUrl" class="cards p-2" :id="hufflepuffCards.id">
                 <div class="tarjetas">
                     <div class="cara delante">
                         <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
-                        <img class="retrato" src="https://ik.imagekit.io/hpapi/cho.jpg" alt="">
+                        <img class="retrato" :src="hufflepuffCards.image" alt="">
                     </div>
                     <div class="cara atras">
                         <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
                         <div class="backText"> 
-                        <h5>Cedric Diggory</h5>
+                        <h6>{{hufflepuffCards.name}}</h6>
                         </div>
                         <div class="fav"></div>
                     </div>
                 </div>
             </div>
-      
-
-         
         </div>
 
-        <!-- <div id="spell-container" class="mb-4">
+        <div id="frogCardGryffindor" class="d-flex flex-wrap justify-content-center">
+            <div v-for="gryffindorCards in gryffindorUrl" class="cards p-2" :id="gryffindorCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="gryffindorCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{gryffindorCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </div> -->
+
+        <div id="frogCardRavenclaw" class="d-flex flex-wrap justify-content-center">
+            <div v-for="ravenclawCards in ravenclawUrl" class="cards p-2" :id="ravenclawCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="ravenclawCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{ravenclawCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="frogCardSlytherin" class="d-flex flex-wrap justify-content-center">
+            <div v-for="slytherinCards in slytherUrl" class="cards p-2" :id="slytherinCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="slytherinCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{slytherinCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+
+
+        
     </main>
 
     <footer>
