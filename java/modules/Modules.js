@@ -1,12 +1,15 @@
 export function loadNavbar() {
     const Navbar = `
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary "data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand col-4 col-sm-2 col-md-1" href="../index.html">
                     <img src="../assets/imgs/logo.png" alt="Logo">
                 </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                           <a class="nav-link" href="../index.html">HOME</a>
                         </li>
