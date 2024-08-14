@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/imgs/HP_-_Harry_Potter_wordmark.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Houses</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/imgs/logo.png" alt="Logo">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">INFO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./spells.html">SPELLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./houses.html">HOUSES</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="app">
+ 
+        <h1 id="maintext" class="text-center m-4 p-4">Welcome to the Hogwarts Houses</h1>
+        <!-- <h2 id="maintext" class="text-center m-4 p-4">Here you will find the most practiced spells in Hogwarts.</h2> -->
+<div>
+    {{superFilteredCharacters}}
+
+    
+<!-- checkbox -->
+<div>
+    <div v-for="casa in housesName" class="list-group" id="checks">
+        <div class="form-check form-switch d-flex gap-2 ms-5">
+          <input  v-model="checkboxHouses" class="form-check-input" type="checkbox" role="switch" :value="casa" >
+          <label class="form-check-label text-light" :for="casa">{{casa}}</label>
+        </div>
+    </div>   
+</div>
+
+<!-- barra de busqueda -->
+<form class="d-flex justify-content-center">
+    <input v-model="textoBuscador" class="form-control w-75 text-center mb-5" type="text" id="buscaText" placeholder="Search">
+</form>
+
+</div>
+
+          
+        <div id="frogCardHufflepuff" class="d-flex flex-wrap justify-content-center">
+            <div v-for="hufflepuffCards in hufflepuffUrl" class="cards p-2" :id="hufflepuffCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="hufflepuffCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{hufflepuffCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div id="frogCardGryffindor" class="d-flex flex-wrap justify-content-center">
+            <div v-for="gryffindorCards in gryffindorUrl" class="cards p-2" :id="gryffindorCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="gryffindorCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{gryffindorCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="frogCardRavenclaw" class="d-flex flex-wrap justify-content-center">
+            <div v-for="ravenclawCards in ravenclawUrl" class="cards p-2" :id="ravenclawCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="ravenclawCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{ravenclawCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="frogCardSlytherin" class="d-flex flex-wrap justify-content-center">
+            <div v-for="slytherinCards in slytherUrl" class="cards p-2" :id="slytherinCards.id">
+                <div class="tarjetas">
+                    <div class="cara delante">
+                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                        <img class="retrato" :src="slytherinCards.image" alt="">
+                    </div>
+                    <div class="cara atras">
+                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                        <div class="backText"> 
+                        <h6>{{slytherinCards.name}}</h6>
+                        </div>
+                        <div class="fav"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    
+        
+
+
+        
+    </main>
+
+    <footer>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../java/houses.js"></script>
+</body>
+
+</html>
