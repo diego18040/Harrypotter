@@ -14,7 +14,7 @@ export function loadNavbar() {
                             <a class="nav-link" href="../index.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOUSE</a>
+                            <a class="nav-link" href="../pages/houses.html">HOUSE</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/wands.html">WANDS</a>
