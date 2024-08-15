@@ -13,6 +13,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -316,6 +317,7 @@ main{
     width: max-content;
     height: auto;
     padding: 0 auto;
+    
 }
 
 .cardsImg {
