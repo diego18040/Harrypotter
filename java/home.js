@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const filterStudentsButton = document.getElementById('filter-students');
     const filterStaffButton = document.getElementById('filter-staff');
     const searchBar = document.getElementById('search-bar');
+    const searchForm = document.getElementById('search-form');
     const cardContainer = document.getElementById('card-temple');
     const paginationContainer = document.getElementById('pagination');
 
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const response = await fetch('https://hp-api.onrender.com/api/characters');
             const data = await response.json();
             filteredData = data.filter(character => character[role] === true);
-            currentPage = 1; // Reinicia a la primera página cuando se filtra
+            currentPage = 1; // Reset to the first page when filtering
             renderPage();
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -50,33 +51,32 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    searchBar.addEventListener('input', () => {
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         const searchTerm = searchBar.value.toLowerCase();
-        const filteredCharacters = filteredData.filter(character =>
+        filteredData = filteredData.filter(character =>
             character.name.toLowerCase().includes(searchTerm)
         );
         currentPage = 1;
-        renderCharacters(filteredCharacters);
+        renderPage();
 
-        if (filteredCharacters.length === 0) {
+        if (filteredData.length === 0) {
             cardContainer.innerHTML = `
                 <div class="no-results">
-                    <h3>"UPSS.... " Lo sentimos, no hay coincidencias para tu búsqueda.</h3>
+                    <h3>"UPSS.... " Lo sentimos al parecer, no hay buenas coincidencias para tu búsqueda.</h3>
                     <ul>
-                        <li>Revisa la ortografía del nombre.</li>
-                        <li>Asegúrate de escribir sin caracteres especiales.</li>
-                        <li>Prueba con otro nombre.</li>
+                        <li>Revisa la ortografía de la palabra.</li>
+                        <li>Asegurate de escribir sin carácteres especiales.</li>
+                        <li>Desactiva las casillas para mayores resultados.</li>
                     </ul>
                 </div>
             `;
-        } else {
-            renderPagination();
         }
     });
 
     filterStudentsButton.addEventListener('click', () => fetchData('hogwartsStudent'));
     filterStaffButton.addEventListener('click', () => fetchData('hogwartsStaff'));
 
-    // Cargar estudiantes por defecto
+    // Load students by default
     fetchData('hogwartsStudent');
 });

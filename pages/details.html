@@ -40,7 +40,15 @@
         </nav>
     </header>
     <main id="app">
-        <div class="card mb-3" style="width: 840px; height: 400px;" id="cardDetails">
+        <div id="banderas">
+            <div>
+                <img src="../assets/imgs/bandera1.png" alt="bandera1">
+            </div>
+            <div>
+                <img src="../assets/imgs/banderas2.png" alt="banderas2">
+            </div>
+        </div>
+        <div class="card mb-3"  id="cardDetails">
             <div v-if="characters" class="row g-0" id="infoCardContainer">
             <div class="col-md-4">
                 <img :src="findCharacterId.image" class="img-fluid" id="detailsImg" :alt="findCharacterId.name">

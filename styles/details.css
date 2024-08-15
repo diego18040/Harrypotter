@@ -21,6 +21,7 @@ body{
 }
 .navbar {
     background-color: black !important;
+    z-index: 100;
 }
 
 .navbar-brand img {
@@ -55,16 +56,33 @@ main{
 }
 
 #cardDetails{
-    background-color: rgba(0, 0, 0, 0.5);
     background-image: url("../assets/imgs/llK.gif");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     color: #fff;
+    width: 850px;
+    height: auto;
+}
+
+#banderas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
     
+    width: 100%;
+}
+
+#banderas div img{
+    width: 500px;
+    height: 800px;
+    z-index: -100;
 
 }
+
+
 #containerBodyCard{
     background-color: rgba(116, 44, 44, 0.5);
     border-radius: 2rem;
