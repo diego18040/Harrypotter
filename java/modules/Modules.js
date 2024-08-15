@@ -14,7 +14,7 @@ export function loadNavbar() {
                             <a class="nav-link" href="../index.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOUSE</a>
+                            <a class="nav-link" href="../pages/houses.html">HOUSE</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/wands.html">WANDS</a>
@@ -38,11 +38,11 @@ export function renderCharacters(characters) {
     if (characters.length === 0) {
         cardContainer.innerHTML = `
           <div class="no-results text-center">
-            <h3>"UPSS.... " Lo sentimos, no hay coincidencias para tu búsqueda.</h3>
+            <h3>"UPSS.... "Sorry, no match found for your search.</h3>
             <ul class="list-unstyled">
-              <li>Revisa la ortografía del nombre.</li>
-              <li>Asegúrate de escribir sin caracteres especiales.</li>
-              <li>Prueba con otro nombre.</li>
+              <li>Check the spelling of the name.</li>
+              <li> Make sure you write without special characters.</li>
+              <li> That wizard does not go to Hogwarts.</li>
             </ul>
           </div>
         `;
@@ -58,9 +58,9 @@ export function renderCharacters(characters) {
       
       return `
           <div class="col-11 col-md-5 col-lg-2 p-0 m-3">
-              <div class="card mx-auto h-100">
+              <div class="card mx-auto h-100 bg bg-dark">
                   <img src="${imageSrc}" class="card-img-top img-fluid" alt="${character.name}">
-                  <div class="card-body d-flex flex-column">
+                  <div id="chCard" class="card-body d-flex flex-column">
                       <h5 class="card-title text-center">${character.name}</h5>
                       <p class="card-text text-center">House: ${character.house || 'Unknown'}</p>
                       <div id="containerButton">

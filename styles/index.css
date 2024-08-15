@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url("../assets/imgs/background.jpg");
+    background-image: url("../assets/imgs/background-dark.jpg");
     background-repeat: no-repeat;
     height: 100%;
     background-position: center;
@@ -52,10 +52,26 @@ body{
     margin-left: auto;
     justify-content: end;
 }
+.no-results {
+    background-image: url("../assets/imgs/graphy-parchment.png");
+    background-repeat: no-repeat;
+    outline: solid 1px black;
+    border-radius: 2rem;
+    height: 100%;
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 1rem;
 
+
+}
 main{
     width: 100%;
 }
+
+
 /* Paginate container style */
 .pagination {
     display: flex;
@@ -197,6 +213,7 @@ main{
    margin-bottom: 8rem;
 }
 #houseChart,#speciesChart,#aliveChart {
+    text-align: center;
     width: 300px; /* Ajusta el ancho según sea necesario */
     height: 300px; /* Ajusta la altura según sea necesario */
 }
@@ -214,7 +231,42 @@ main{
     background-color: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
     border-radius: 1rem; /* Bordes redondeados para la tabla */
     text-align: center;
+    height: auto;
     
+}
+
+.table-and-chart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+#chCard{
+    color: beige;
+}
+
+
+/* Responsividad: apilar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .table-and-chart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        margin-top: 20px;
+        min-width: 100%;
+    }
+
+    .table-container {
+        margin-top: 40px;
+    }
 }
 
 /* Opcional: estilos para las celdas de la tabla */
@@ -261,8 +313,67 @@ main{
         margin-bottom: 0;
     }
 }
-.cardsImg{
-    width: 360px;
+
+#sectionImages {
+    position: relative;
+    width: max-content;
+    height: auto;
+    padding: 0 auto;
+}
+
+.cardsImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+}
+
+.cardsImg:nth-child(1) {
+    --index: 0;
+    left: 12rem;
+}
+
+.cardsImg:nth-child(2) {
+    --index: 1;
+    left: 4rem;
+
+}
+
+.cardsImg:nth-child(3) {
+    --index: 2;
+    left: -4rem;
+}
+
+.cardsImg:nth-child(4) {
+    --index: 3;
+    left: -14rem;
+}
+
+.cardsImg:nth-child(5) {
+    --index: 4;
+    left: -22rem;
+}
+
+.cardsImg:nth-child(6) {
+    --index: 5;
+    left: -30rem;
+}
+
+.cardsImg:nth-child(7) {
+    --index: 6;
+    left: -38rem;
+}
+
+.cardsImg:nth-child(8) {
+    --index: 7;
+    left: -46rem;
+}
+
+
+
+ .cardsImg{
+    width: 300px;
     height: auto;
     border-radius: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -272,41 +383,15 @@ main{
    
 }
 
-.cardsImg:nth-child(1) {
-    left: 290px;
-    transform: scale(0.8);
-    z-index: 1;
-}
-
-.cardsImg:nth-child(2) {
-    left: 110px;
-    transform: scale(0.9);
-    z-index: 2;
-}
-
-.cardsImg:nth-child(3) {
-    left: 0px;
-    transform: scale(1);
-    z-index: 3;
-}
-
-.cardsImg:nth-child(4) {
-    left: -90px;
-    transform: scale(0.9);
-    z-index: 2;
-}
-
-.cardsImg:nth-child(5) {
-    left: -210px;
-    transform: scale(0.8);
-    z-index: 1;
-}
 .cardsImg:hover {
-    transform: scale(1.1); 
-    z-index: 10; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+    z-index: 101;
+    box-shadow: 0 4px 8px rgba(252, 248, 248, 1);
     cursor: pointer;
 }
+
+
+
 
 #silueta{
     width: 100vw; 
@@ -372,7 +457,10 @@ audio:hover{
     text-align: center;
 }
 #maintext{
+    background-color: #211f1fdb;
     color: rgb(228, 215, 186);
+    font-size: 1.5rem;
+    border-radius: 1rem;
 }
 #favCont{
     display: flex;
