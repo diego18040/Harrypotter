@@ -247,6 +247,9 @@ main{
     align-items: center;
     min-width: 400px;
 }
+#chCard{
+    color: beige;
+}
 
 
 /* Responsividad: apilar en pantallas pequeñas */
@@ -421,9 +424,10 @@ audio:hover{
     text-align: center;
 }
 #maintext{
-    background-color: #000000;
+    background-color: #211f1fdb;
     color: rgb(228, 215, 186);
     font-size: 1.5rem;
+    border-radius: 1rem;
 }
 #favCont{
     display: flex;
