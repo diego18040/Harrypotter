@@ -16,7 +16,7 @@ body{
 }
 
 .navbar {
-    background-color: black
+    background-color: black !important;
 }
 
 .navbar-brand img {
@@ -188,12 +188,13 @@ main{
 
 #title {
     width: 650px;
-    margin-top: 20px;
+    margin-top: 3rem;
 }
 #sectionImages {
    display: flex;
    justify-content: center;
    position: relative;
+   margin-bottom: 8rem;
 }
 #houseChart,#speciesChart,#aliveChart {
     width: 300px; /* Ajusta el ancho según sea necesario */
@@ -209,16 +210,18 @@ main{
     border-radius: 10px; /* Bordes redondeados */
 }
 /* Opcional: estilos adicionales para la tabla */
-.table {
-    --bs-table-bg: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
+#tabla1 {
+    background-color: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
     border-radius: 1rem; /* Bordes redondeados para la tabla */
     text-align: center;
     
 }
 
 /* Opcional: estilos para las celdas de la tabla */
-.table th, .table td {
+#tabla1 th, #tabla1 td,#tabla1 tr {
     padding: 10px;
+    background-color: rgba(255, 255, 255, 0.0);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.0));
     outline: solid black 1px;
     text-align: center;
     font-size: 1.2rem;
@@ -363,7 +366,7 @@ audio:hover{
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    background: linear-gradient(180deg, rgba(251, 251, 251, 0), rgb(0, 0, 0));
+    background: linear-gradient(180deg, rgba(251, 251, 251, 0.041), rgb(0, 0, 0));
     width: 100%;
     height: 100%;
     text-align: center;
@@ -371,7 +374,17 @@ audio:hover{
 #maintext{
     color: rgb(228, 215, 186);
 }
-
+#favCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    font-size: medium;
+}
+.textFav{
+    color: rgb(82, 59, 30);
+    font-size: 2rem;
+}
 #spell-container{
     display: flex;
     flex-wrap: wrap;
@@ -460,6 +473,7 @@ audio:hover{
     border-radius: 4px;
     cursor: pointer;
 }
+
 .backText{
     position: relative;
     margin-top: 2rem;
@@ -585,8 +599,8 @@ tbody tr:hover {
     
 }
 #navS{
-    background-color: black;
+    background-color: black !important;
 }
 #navW{
-    background-color: black;
+    background-color: black !important;
 }
