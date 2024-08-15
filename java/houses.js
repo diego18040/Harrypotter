@@ -130,6 +130,8 @@ const app = createApp({
                 this.gryffindorUrl = filtroGryffindor;
                 this.slytherUrl = filtroSlytherin;
                 this.ravenclawUrl = filtroRavenclaw; 
+                console.log(this.hufflepuffUrl.length)
+
             }
             else{
                 this.hufflepuffUrl = filtroHufflepuff.filter(character => this.checkboxHouses.includes(character.house));
