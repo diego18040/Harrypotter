@@ -559,13 +559,7 @@ audio:hover{
     object-fit: cover;
     color:beige;
     position: relative;
-    width: 300px;
-    height: 287px;
-    opacity: 0.9;
-    
-}
-.tarjetas .cara{
-    position: absolute;
+    height: 75vh;
     width: 100%;
 }
 .textWand{
@@ -596,6 +590,17 @@ th{
 td{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.122), rgba(0, 0, 0, 0.742));
 }
-.tarjetas:hover .atras{
-    transform: perspective(600px) rotateY(360deg);
-} 
+tbody tr:hover {
+    transform: scale(1.25);
+}
+#wand{
+    height: 100px;
+    width: 100px;
+    
+}
+#navS{
+    background-color: black !important;
+}
+#navW{
+    background-color: black !important;
+}
