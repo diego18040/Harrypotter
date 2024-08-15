@@ -65,34 +65,38 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         // Create charts
         const houseCtx = document.getElementById("houseChart").getContext("2d");
+              houseCtx.canvas.width = 250; // Ancho deseado
+              houseCtx.canvas.height = 250; // Alto deseado
         const speciesCtx = document.getElementById("speciesChart").getContext("2d");
         const aliveCtx = document.getElementById("aliveChart").getContext("2d");
-
-        new Chart(houseCtx, {
-            type: 'pie',
-            data: {
-                labels: Object.keys(houseCounts),
-                datasets: [{
-                    data: Object.values(houseCounts),
-                    backgroundColor: ['#7F0909', '#2A623D', '#0E1A40', '#EEE117']
-                }]
+              aliveCtx.canvas.width = 250; // Ancho deseado
+              aliveCtx.canvas.height = 250; // Alto deseado
+new Chart(houseCtx, {
+    type: 'pie',
+    data: {
+        labels: Object.keys(houseCounts),
+        datasets: [{
+            data: Object.values(houseCounts),
+            backgroundColor: ['#7F0909', '#2A623D', '#0E1A40', '#EEE117']
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false, // Permitir cambiar dimensiones
+        plugins: {
+            legend: {
+                position: 'top',
             },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                return tooltipItem.label + ': ' + tooltipItem.raw;
-                            }
-                        }
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw;
                     }
                 }
             }
-        });
+        }
+    }
+});
 
         new Chart(speciesCtx, {
             type: 'pie',
@@ -100,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 labels: Object.keys(filteredSpeciesCounts),
                 datasets: [{
                     data: Object.values(filteredSpeciesCounts),
-                    backgroundColor: ['#f5dd8d', '#36A2EB', '#FFCE56', '#E0E0E0','#50a53fcb','#d6a915cb','#bf15d6cb',
+                    backgroundColor: ['#2d8da580', '#36A2EB', '#FFCE56', '#E0E0E0','#50a53fcb','#d6a915cb','#bf15d6cb',
                         '#000000cb','#219c82','#034403','#440303','#69500ac9']
                 }]
             },
@@ -120,7 +124,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                 }
             }
         });
-
         new Chart(aliveCtx, {
             type: 'pie',
             data: {
@@ -132,6 +135,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false, // Permitir cambiar dimensiones
                 plugins: {
                     legend: {
                         position: 'top',

@@ -52,10 +52,26 @@ body{
     margin-left: auto;
     justify-content: end;
 }
+.no-results {
+    background-image: url("../assets/imgs/graphy-parchment.png");
+    background-repeat: no-repeat;
+    outline: solid 1px black;
+    border-radius: 2rem;
+    height: 100%;
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 1rem;
 
+
+}
 main{
     width: 100%;
 }
+
+
 /* Paginate container style */
 .pagination {
     display: flex;
@@ -197,6 +213,7 @@ main{
    margin-bottom: 8rem;
 }
 #houseChart,#speciesChart,#aliveChart {
+    text-align: center;
     width: 300px; /* Ajusta el ancho según sea necesario */
     height: 300px; /* Ajusta la altura según sea necesario */
 }
@@ -214,7 +231,39 @@ main{
     background-color: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
     border-radius: 1rem; /* Bordes redondeados para la tabla */
     text-align: center;
+    height: auto;
     
+}
+
+.table-and-chart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+
+/* Responsividad: apilar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .table-and-chart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        margin-top: 20px;
+        min-width: 100%;
+    }
+
+    .table-container {
+        margin-top: 40px;
+    }
 }
 
 /* Opcional: estilos para las celdas de la tabla */

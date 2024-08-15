@@ -38,11 +38,11 @@ export function renderCharacters(characters) {
     if (characters.length === 0) {
         cardContainer.innerHTML = `
           <div class="no-results text-center">
-            <h3>"UPSS.... " Lo sentimos, no hay coincidencias para tu búsqueda.</h3>
+            <h3>"UPSS.... "Sorry, no match found for your search.</h3>
             <ul class="list-unstyled">
-              <li>Revisa la ortografía del nombre.</li>
-              <li>Asegúrate de escribir sin caracteres especiales.</li>
-              <li>Prueba con otro nombre.</li>
+              <li>Check the spelling of the name.</li>
+              <li> Make sure you write without special characters.</li>
+              <li> That wizard does not go to Hogwarts.</li>
             </ul>
           </div>
         `;
