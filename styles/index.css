@@ -261,8 +261,67 @@ main{
         margin-bottom: 0;
     }
 }
-.cardsImg{
-    width: 360px;
+
+#sectionImages {
+    position: relative;
+    width: max-content;
+    height: auto;
+    padding: 0 auto;
+}
+
+.cardsImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    
+}
+
+.cardsImg:nth-child(1) {
+    --index: 0;
+    left: 12rem;
+}
+
+.cardsImg:nth-child(2) {
+    --index: 1;
+    left: 4rem;
+
+}
+
+.cardsImg:nth-child(3) {
+    --index: 2;
+    left: -4rem;
+}
+
+.cardsImg:nth-child(4) {
+    --index: 3;
+    left: -14rem;
+}
+
+.cardsImg:nth-child(5) {
+    --index: 4;
+    left: -22rem;
+}
+
+.cardsImg:nth-child(6) {
+    --index: 5;
+    left: -30rem;
+}
+
+.cardsImg:nth-child(7) {
+    --index: 6;
+    left: -38rem;
+}
+
+.cardsImg:nth-child(8) {
+    --index: 7;
+    left: -46rem;
+}
+
+
+
+ .cardsImg{
+    width: 300px;
     height: auto;
     border-radius: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -272,41 +331,15 @@ main{
    
 }
 
-.cardsImg:nth-child(1) {
-    left: 290px;
-    transform: scale(0.8);
-    z-index: 1;
-}
-
-.cardsImg:nth-child(2) {
-    left: 110px;
-    transform: scale(0.9);
-    z-index: 2;
-}
-
-.cardsImg:nth-child(3) {
-    left: 0px;
-    transform: scale(1);
-    z-index: 3;
-}
-
-.cardsImg:nth-child(4) {
-    left: -90px;
-    transform: scale(0.9);
-    z-index: 2;
-}
-
-.cardsImg:nth-child(5) {
-    left: -210px;
-    transform: scale(0.8);
-    z-index: 1;
-}
 .cardsImg:hover {
-    transform: scale(1.1); 
-    z-index: 10; 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+    z-index: 101;
+    box-shadow: 0 4px 8px rgba(252, 248, 248, 1);
     cursor: pointer;
 }
+
+
+
 
 #silueta{
     width: 100vw; 
