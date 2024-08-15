@@ -421,7 +421,9 @@ audio:hover{
     text-align: center;
 }
 #maintext{
+    background-color: #000000;
     color: rgb(228, 215, 186);
+    font-size: 1.5rem;
 }
 #favCont{
     display: flex;
