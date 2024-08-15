@@ -58,9 +58,9 @@ export function renderCharacters(characters) {
       
       return `
           <div class="col-11 col-md-5 col-lg-2 p-0 m-3">
-              <div class="card mx-auto h-100">
+              <div class="card mx-auto h-100 bg bg-dark">
                   <img src="${imageSrc}" class="card-img-top img-fluid" alt="${character.name}">
-                  <div class="card-body d-flex flex-column">
+                  <div id="chCard" class="card-body d-flex flex-column">
                       <h5 class="card-title text-center">${character.name}</h5>
                       <p class="card-text text-center">House: ${character.house || 'Unknown'}</p>
                       <div id="containerButton">
