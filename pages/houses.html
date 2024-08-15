@@ -75,6 +75,16 @@
 
 </div>
 <div>
+    <div id="fotito" v-if="hufflepuffUrl.length === 0 && gryffindorUrl.length === 0 && 
+    ravenclawUrl.length === 0 && slytherUrl.length === 0">
+        <h2 class="text-center ">no hay resultados para tu busqueda</h2>
+        
+    </div>
+       
+    </div>
+</div>
+
+<div>
           <div class="pb-5" id="Hufflepuff" v-if="hufflepuffUrl.length > 0">
             <div id="frogCardHufflepuff" class="d-flex flex-wrap justify-content-center">
                 <div v-for="hufflepuffCards in hufflepuffUrl" class="cards p-2" :id="hufflepuffCards.id"  
@@ -95,7 +105,8 @@
                 </div>
             </div>
           </div>
-          
+          <!-- <div v-else>
+                </div> -->
         </div>
 
 
@@ -119,8 +130,8 @@
             </div>
         </div>
     </div>
-    <div v-else>
-            </div>
+    <!-- <div v-else>
+            </div> -->
 </div>
 
 
@@ -146,8 +157,8 @@
             </div>
         </div>
     </div>
-    <div v-else>
-            </div>
+    <!-- <div v-else>
+            </div> -->
     </div>
 
 
@@ -174,8 +185,8 @@
             </div>
         </div> 
     </div> 
-     <div v-else>
-            </div>
+     <!-- <div v-else>
+            </div> -->
 </div>
     
         
