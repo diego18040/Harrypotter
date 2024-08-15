@@ -26,7 +26,6 @@ const app = createApp({
 
             textoBuscador: "",
             checkboxHouses: [],
-            filtrosCombinados: [],
             housesName: [],
         };
     },

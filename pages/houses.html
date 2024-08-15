@@ -43,14 +43,18 @@
 
     <main id="app">
  
-        <h1 id="maintext" class="text-center m-4 p-4">Welcome to the Hogwarts Houses</h1>
-        <!-- <h2 id="maintext" class="text-center m-4 p-4">Here you will find the most practiced spells in Hogwarts.</h2> -->
-<div>
-    {{superFilteredCharacters}}
 
-    
-<!-- checkbox -->
-<div>
+<div id="allHouses" class="">
+    <div>
+        <h1 id="maintext" class="text-center mb-5 pb-5">Welcome to the Hogwarts Houses</h1>
+    </div>
+
+   
+
+    <div>
+        {{superFilteredCharacters}}
+        <!-- checkbox -->
+<div class="d-flex container-fluid align-items-center justify-content-center pb-3">
     <div v-for="casa in housesName" class="list-group" id="checks">
         <div class="form-check form-switch d-flex gap-2 ms-5">
           <input  v-model="checkboxHouses" class="form-check-input" type="checkbox" role="switch" :value="casa" >
@@ -60,31 +64,35 @@
 </div>
 
 <!-- barra de busqueda -->
-<form class="d-flex justify-content-center">
+<form class="d-flex justify-content-center ">
     <input v-model="textoBuscador" class="form-control w-75 text-center mb-5" type="text" id="buscaText" placeholder="Search">
 </form>
+    </div>
+
 
 </div>
 
-          
-        <div id="frogCardHufflepuff" class="d-flex flex-wrap justify-content-center">
-            <div v-for="hufflepuffCards in hufflepuffUrl" class="cards p-2" :id="hufflepuffCards.id">
-                <div class="tarjetas">
-                    <div class="cara delante">
-                        <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
-                        <img class="retrato" :src="hufflepuffCards.image" alt="">
-                    </div>
-                    <div class="cara atras">
-                        <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
-                        <div class="backText"> 
-                        <h6>{{hufflepuffCards.name}}</h6>
+          <div class="pb-5" id="Hufflepuff">
+            <div id="frogCardHufflepuff" class="d-flex flex-wrap justify-content-center">
+                <div v-for="hufflepuffCards in hufflepuffUrl" class="cards p-2" :id="hufflepuffCards.id">
+                    <div class="tarjetas">
+                        <div class="cara delante">
+                            <img class="portadaTarjeta" src="../assets/imgs/foto.png" alt="">
+                            <img class="retrato" :src="hufflepuffCards.image" alt="">
                         </div>
-                        <div class="fav"></div>
+                        <div class="cara atras">
+                            <img class="reversoTarjeta" src="../assets/imgs/título.png" alt="">
+                            <div class="backText"> 
+                            <h6>{{hufflepuffCards.name}}</h6>
+                            </div>
+                            <div class="fav"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+          </div>
+   
+          <div class="pb-5" id="Gryffindor">
          <div id="frogCardGryffindor" class="d-flex flex-wrap justify-content-center">
             <div v-for="gryffindorCards in gryffindorUrl" class="cards p-2" :id="gryffindorCards.id">
                 <div class="tarjetas">
@@ -102,8 +110,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
-
+    <div class="pb-5" id="Ravenclaw">
         <div id="frogCardRavenclaw" class="d-flex flex-wrap justify-content-center">
             <div v-for="ravenclawCards in ravenclawUrl" class="cards p-2" :id="ravenclawCards.id">
                 <div class="tarjetas">
@@ -121,7 +130,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="pb-5" id="Slytherin">
         <div id="frogCardSlytherin" class="d-flex flex-wrap justify-content-center">
             <div v-for="slytherinCards in slytherUrl" class="cards p-2" :id="slytherinCards.id">
                 <div class="tarjetas">
@@ -139,6 +150,7 @@
                 </div>
             </div>
         </div> 
+    </div> 
     
         
 

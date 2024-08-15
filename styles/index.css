@@ -303,7 +303,7 @@ h6{
     position: relative;
     width: 300px;
     height: 287px;
-    opacity: 0.9;
+    opacity: 0.85;
     
 }
 .tarjetas .cara{
@@ -387,3 +387,56 @@ h6{
 .tarjetas:hover .atras{
     transform: perspective(600px) rotateY(360deg);
 } 
+
+#Hufflepuff{
+    background-image: url(../assets/imgs/houses\ hufflepuff.jpg);
+    background-position: center top;
+    background-repeat: repeat;
+    /* background-size:  cover; */
+    min-height: 100vh;
+    /* display: flex;
+    align-items: flex-start; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#Gryffindor{
+    background-image: url(../assets/imgs/house\ gryffindor.jpg);
+    background-position: center top;
+    background-repeat: repeat;
+    /* background-size:  overflow; */
+    min-height: 100vh;
+    /* display: flex;
+    align-items: flex-start; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#Ravenclaw{
+    background-image: url(../assets/imgs/house\ ravenclaw\ flag.jpg);
+    background-position: center top;
+    background-repeat: repeat;
+    /* background-size:  cover; */
+    min-height: 100vh;
+    /* display: flex;
+    align-items: flex-start; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#Slytherin{
+    background-image: url(../assets/imgs/house\ slytherin.jpg);
+    background-position: center top;
+    background-repeat: repeat;
+    /* background-size:  overflow; */
+    min-height: 100vh;
+    /* display: flex;
+    align-items: flex-start; */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#allHouses{
+    background-image: url(../assets/imgs/All\ Houses.jpg);
+    /* background-position: ce; */
+    /* background-repeat: repeat; */
+    min-height: 10vh;
+    padding-top: 4rem;
+    /* padding-bottom: 5rem; */
+}
